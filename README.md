@@ -1,9 +1,9 @@
 # Project Templates for Visual Studio
 
-Il y aura plusieurs projet pour avoir la base pour la création de templates de projet pour Visual Studio.
+Il y aura plusieurs projets pour avoir une base pour la crÃ©ation de templates pour Visual Studio.
 
 ### Projets
-- **TemplateSqlite** : un projet Blazor Server avec une base de données SQLite et l'authentification "Comptes Individuel".
+- **TemplateSqlite** : un projet Blazor Server avec une base de donnÃ©es SQLite et l'authentification "Comptes Individuel".
 
 
 
@@ -12,8 +12,8 @@ Il y aura plusieurs projet pour avoir la base pour la création de templates de p
 - Les logs sont fait avec [Serilog](https://serilog.net/).
 - J'ai "Scaffolding" toutes les pages Identity.
 - La connexion (_Login_) se fait sur le "UserName" avec Identity, et non plus sur l'Email.
-- La base de données SQLite est créée au démarrage de l'application et est mise dans un répertoire "Database", pour simplifier dans le cas ou l'application serait dans un container.  
-- A la création de la base de données, un utilisateur "root" est injecté et il a le rôle "Admin"
+- La base de donnÃ©es SQLite est crÃ©Ã©e au dÃ©marrage de l'application et est mise dans un rÃ©pertoire "Database", pour simplifier dans le cas ou l'application serait dans un container.  
+- A la crÃ©ation de la base de donnÃ©es, un utilisateur "root" est injectÃ© et il a le rÃ´le "Admin"
 ```csharp
 var poweruser = new IdentityUser
                 {
@@ -24,4 +24,4 @@ var poweruser = new IdentityUser
 string userPwd = "Azerty123!";
 var createPowerUser = await userManager.CreateAsync(poweruser, userPwd);
 ```
-- J'ai traduit les pages de Login, Register,... en français.
+- J'ai traduit les pages de Login, Register,... en franÃ§ais.
