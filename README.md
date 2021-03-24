@@ -4,8 +4,7 @@ Il y aura plusieurs projets pour avoir une base pour la création de templates p
 
 ### Projets
 - **TemplateSqlite** : un projet Blazor Server avec une base de données SQLite et l'authentification "Comptes Individuel".
-
-
+- **BlazorServerMySqlTemplate** : projet Blazor Server avec une base de données MySQL et l'authentification "Compte Individuel".
 
 ### Choses communes
 
