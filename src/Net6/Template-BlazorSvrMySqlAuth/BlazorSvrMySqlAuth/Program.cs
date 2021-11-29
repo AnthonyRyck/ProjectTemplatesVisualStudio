@@ -1,10 +1,7 @@
 using BlazorSvrMySqlAuth.Areas.Identity;
 using BlazorSvrMySqlAuth.Data;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
@@ -84,5 +81,16 @@ using (var scope = scopeFactory.CreateScope())
 		DataInitializer.InitData(roleManager, userManager).Wait();
 	}
 }
+
+// Pour les logs.
+// ATTENTION : il faut que la table Logs (créé par Serilog) soit faites APRES
+// la création des tables ASP, sinon "db.Database.EnsureCreated" considère que la
+// base est déjà créée.
+Log.Logger = new LoggerConfiguration()
+	.MinimumLevel.Debug()
+	.MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+	.MinimumLevel.Override("System", LogEventLevel.Warning)
+	.WriteTo.MySQL(connectionDb, "Logs")
+	.CreateLogger();
 
 app.Run();

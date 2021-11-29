@@ -3,8 +3,10 @@
 Il y aura plusieurs projets pour avoir une base pour la création de templates pour Visual Studio.
 
 ### Projets
+#### .Net 5
 - **TemplateSqlite** : un projet Blazor Server avec une base de données SQLite et l'authentification "Comptes Individuel".
 - **BlazorServerMySqlTemplate** : projet Blazor Server avec une base de données MySQL/MariaDb et l'authentification "Compte Individuel".
+#### .Net 6
 - **Template-BlazorSvrMySqlAuth** : projet Blazor Server en **.Net 6** avec une base de données MySQL/MariaDb et l'authentification "Compte Individuel".
 
 ### Choses communes
